@@ -69,7 +69,7 @@
 
       <div class="gift-item">
         <div class="gift-info">
-          <a href="https://es.aliexpress.com/item/1005007345325613.html?spm=a2g0o.tm1000015644.d0.1.7b7e7eccFzyfqE&pvid=4b4dc921-e3fc-4c6c-acc0-8028b6ab3f1a&pdp_ext_f=%7B%22orig_item_id%22%3A%221005007083700301%22%2C%22ship_from%22%3A%22CN%22%2C%22orig_sl_item_id%22%3A%221005007345325613%22%2C%22sku_id%22%3A%2212000040354855928%22%7D&scm=1007.39065.404442.0&scm-url=1007.39065.404442.0&scm_id=1007.39065.404442.0&pdp_npi=6%40dis%21CLP%21CLP%2010%2C151%21CLP%205%2C100%21%21%2174.24%2137.30%21%402101ee6617628298918037540ee83a%2112000040354855928%21gdf%21CL%212411367809%21X%211%210%21n_tag%3A-29919%3Bd%3A3aed3b25%3Bm03_new_user%3A-29895&aecmd=true&gatewayAdapt=glo2esp"
+          <a href="https://www.mercadolibre.cl/mini-teclado-rgb-inalambrico-touchpad-smartv-pc-tvb036-negro/p/MLC58103509#polycard_client=recommendations_vpp-pdp-v2p-pom&reco_backend=recomm-platform_v2p-model&reco_model=rk_ent_v3_retsys_org&reco_client=vpp-pdp-v2p-pom&reco_item_pos=0&reco_backend_type=low_level&reco_id=d8a0faac-c6d4-40ed-815c-ddfd301f4be8&wid=MLC3221623054&sid=recos"
             target="_blank">Teclado inalambrico</a>
           <div class="sub-info">
           </div>
@@ -137,6 +137,22 @@
 
   <script>
   // Crear nieve al cargar la página
+
+ document.querySelectorAll(".gift-item").forEach(item => {
+  const link = item.querySelector(".gift-info a")?.href;
+  const image = item.querySelector(".image-container img");
+
+  if (link && image) {
+    image.style.cursor = "pointer"; // para que se vea clickeable
+    image.addEventListener("click", () => {
+      window.open(link, "_blank");
+    });
+  }
+});
+
+  
+
+
   document.addEventListener("DOMContentLoaded", () => {
     const snowContainer = document.createElement("div");
     snowContainer.style.position = "fixed";
